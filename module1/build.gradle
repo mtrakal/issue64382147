@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+repositories {
+    maven {
+        url "http://files.couchbase.com/maven2/"
+    }
+}
+
+dependencies {
+    api "com.couchbase.lite:couchbase-lite-android:1.4.1-64"
+}

@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+repositories {
+    maven {
+        // only for achartengine, remove after: https://budgetbakers.atlassian.net/browse/WALLET-3374
+        url 'http://repository-achartengine.forge.cloudbees.com/snapshot/'
+    }
+}
+
+dependencies {
+    implementation group: 'org.achartengine', name: 'achartengine', version: '1.2.0'
+}
